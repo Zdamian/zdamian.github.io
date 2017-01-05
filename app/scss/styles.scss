@@ -1,0 +1,456 @@
+@import 'mixins/css3mixins';
+@import 'mixins/rwd';
+@import 'variables';
+
+body {
+    position: relative;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: 300;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0px;
+    font-weight: 100;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.well, .jumbotron {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.hide {
+    display: none;
+}
+
+.body-page {
+    padding: 100px 0;
+}
+
+.avatar {
+    background: url('/app/images/avatar.jpg');
+    background-size: cover;
+    margin: 0 auto;
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+#Container {
+    width: 100%;
+    height: 693px;
+    position: relative;
+    overflow: hidden;
+}
+
+#Container video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%,-50%);
+    z-index: -100;
+}
+
+.wrapper {
+  margin: 20px auto;
+  position: relative;
+}
+
+.card video {
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 98%;
+  background: rgba(0,0,0,0.2);
+
+  @include respond-to(xl) {
+        height: 97%;
+    }
+}
+
+.overlay-title {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-size: 20px;
+}
+
+.overlay .icon span {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 47%;
+    margin-top: -45px;
+    margin-left: -45px;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.overlay:hover {
+  background: rgba(0,0,0,0.4);
+}
+
+.overlay:hover .icon span {
+    display: block;
+}
+
+.glyphicon-play-circle {
+    font-size: 120px;
+}
+
+.active-btn-portfolio {
+    background-color: #15596e !important;
+    border-color: white;
+    color: white !important;
+
+    &:hover {
+        border-color: white;
+    }
+}
+
+.icon-mobile {
+    font-size: 18px;
+    margin-left: -5px;
+}
+
+.glyphicon-envelope {
+    padding-right: 5px;
+}
+
+.navbar-toggle {
+    width: 100%;
+    margin-right: 0;
+    color: white;
+    font-size: 19px;
+}
+
+.nav-pills li a:hover {
+    background-color: #333;
+    border-radius: 0;
+    transition: background-color 0.5s;
+}
+
+.nav-pills li.active a, .nav-pills li.active a:focus, .nav-pills li.active a:hover {
+    background-color: $backgroundFooterNavbar;
+    border-radius: 0;
+}
+
+.business-header {
+    height: 693px;
+    width: auto;
+
+    h1 {
+        color: white;
+        text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.9);
+    }
+
+    p {
+        font-family: 'Courgette', cursive;
+        color: white;
+    }
+}
+
+.navbar {
+    margin-bottom: 0px;
+    border-radius: 0px;
+    min-height: 40px;
+
+    a {
+       font-weight: 100;
+       color: white;
+       font-size: 18px; 
+    }
+}
+
+.bg-about {
+    background-color: $backgroundAbout;
+    color: white;
+
+    .img-circle {
+        border: 3px solid white;
+        margin-bottom: 20px;
+    }
+
+    .about {
+        margin-bottom: 50px;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p, span {
+
+            @include respond-to(xl) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    h2 {
+        margin-bottom: 50px;
+
+        @include respond-to(xl) {
+            font-size: 38px;
+        }
+    }
+
+    span {
+        font-size: 18px;
+        color: white;
+        font-weight: 100;
+    }
+}
+
+.bg-work, .bg-skills {
+    background-color: #f5f5f5;
+
+    .pie_progress {
+        width: 100px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    .pie_progress__number {
+        font-size: 26px
+    }
+
+    .pie_progress__label {
+        margin-top: 20px;
+    }
+
+    h2 {
+        @include respond-to(xs) {
+            font-size: 38px;
+        }
+    }
+
+    p {
+        font-size: 24px;
+        color: #000;
+    }
+}
+
+.bg-education {
+    background-color: $backgroundEduPort;
+    color: white;
+
+    h2 {
+        margin-bottom: 50px;
+
+        @include respond-to(xl) {
+            font-size: 38px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 300;
+
+        @include respond-to(xl) {
+            font-size: 14px;
+        }
+    }
+
+    h3 {
+        font-weight: 300;
+
+        @include respond-to(xl) {
+            font-size: 18px;
+        }
+    }
+}
+
+.bg-skills {
+
+    h3 {
+        font-weight: 400;
+
+        @include respond-to(xl) {
+            font-size: 22px;
+        }
+    }
+}
+
+.bg-portfolio {
+    background-color: $backgroundAbout;
+    color: white;
+
+    h2 {
+        @include respond-to(xl) {
+            font-size: 38px;
+        }
+    }
+
+    img {
+        margin-bottom: 25px;
+
+        &:hover {
+            box-shadow: 0 0 16px rgba(0,0,0,.9);
+            transition: box-shadow 0.5s;
+        }
+    }
+
+    .img-animations .panel-default {
+        border-radius: 0;
+
+        .panel-heading {
+            font-size: 16px;
+        }
+    }
+
+    .btn-group-justified {
+
+        .btn-group .btn {
+            width: 98%;
+        }
+
+        button {
+            background-color: $backgroundAbout;
+            color: white;
+            font-size: 18px;
+            font-weight: 300;
+            border-radius: 0;
+            border-color: white;
+
+            @include respond-to(xl) {
+                font-size: 14px;
+            }
+
+            &:hover {
+                color: #15596e;
+                border-color: #15596e;
+                background: none;
+                transition: all 0.7s;
+            }
+        }
+    }
+}
+
+.bg-contact {
+    background-color: #f5f5f5;
+
+    h2 {
+        margin-bottom: 35px;
+
+        @include respond-to(xl) {
+            font-size: 32px;
+        }
+    }
+
+    p, label {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .form-horizontal .form-group {
+        margin-left: 0;
+    }
+
+    address {
+        strong {
+            margin-bottom: 20px;
+        }
+
+        div {
+            margin-bottom: 5px;
+        }
+    }
+
+    .btn-primary {
+        background: none;
+        color: #15596e;
+        font-size: 18px;
+        border-radius: 0;
+        border-color: #15596e;
+        margin-top: 20px;
+
+        &:hover, &:active, &:focus {
+            color: white;
+            background-color: #15596e;
+            border-radius: 0;
+            border-color: white;
+            transition: all 0.7s;
+        }
+    }
+}
+
+footer {
+    background-color: $backgroundFooterNavbar;
+    color: white;
+
+    i {
+        color: white;
+        font-size: 22px;
+
+        &:hover {
+            font-size: 21px;
+            transition: font-size 0.1s;
+        }
+    }
+
+    p {
+       border-top: 1px solid #222;
+       padding-top: 15px;
+       font-size: 14px;
+    }
+
+    .bg-icon {
+        margin: 15px 0;
+        padding: 10px 0;
+    }
+
+    .icon-github:hover {
+        color: #444;
+        transition: all 0.7s;
+    }
+
+    .icon-bitbucket:hover {
+        color: #093654;
+        transition: all 0.7s;
+    }
+
+    .icon-facebook:hover {
+        color: #3b5998;
+        transition: all 0.7s;
+    }
+
+    .icon-youtube:hover {
+        color: #C63619;
+        transition: all 0.7s;
+    }
+
+    .icon-deviantart:hover {
+        color: green;
+        transition: all 0.7s;
+    }
+
+    .icon-cube:hover {
+        color: #133783;
+        transition: all 0.7s;
+    }
+}

@@ -1,0 +1,326 @@
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+body {
+  position: relative; }
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 42px;
+  font-weight: 300; }
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 0px;
+  font-weight: 100; }
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 100; }
+
+.well, .jumbotron {
+  background: none;
+  border: none;
+  box-shadow: none; }
+
+.hide {
+  display: none; }
+
+.body-page {
+  padding: 100px 0; }
+
+.avatar {
+  background: url("/app/images/avatar.jpg");
+  background-size: cover;
+  margin: 0 auto;
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+  margin-top: 15px; }
+
+#Container {
+  width: 100%;
+  height: 693px;
+  position: relative;
+  overflow: hidden; }
+
+#Container video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -100; }
+
+.wrapper {
+  margin: 20px auto;
+  position: relative; }
+
+.card video {
+  width: 100%; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 98%;
+  background: rgba(0, 0, 0, 0.2); }
+  @media (max-width: 767px) {
+    .overlay {
+      height: 97%; } }
+
+.overlay-title {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  font-size: 20px; }
+
+.overlay .icon span {
+  display: none;
+  position: absolute;
+  top: 45%;
+  left: 47%;
+  margin-top: -45px;
+  margin-left: -45px;
+  width: 90px;
+  height: 90px;
+  cursor: pointer; }
+
+.overlay:hover {
+  background: rgba(0, 0, 0, 0.4); }
+
+.overlay:hover .icon span {
+  display: block; }
+
+.glyphicon-play-circle {
+  font-size: 120px; }
+
+.active-btn-portfolio {
+  background-color: #15596e !important;
+  border-color: white;
+  color: white !important; }
+  .active-btn-portfolio:hover {
+    border-color: white; }
+
+.icon-mobile {
+  font-size: 18px;
+  margin-left: -5px; }
+
+.glyphicon-envelope {
+  padding-right: 5px; }
+
+.navbar-toggle {
+  width: 100%;
+  margin-right: 0;
+  color: white;
+  font-size: 19px; }
+
+.nav-pills li a:hover {
+  background-color: #333;
+  border-radius: 0;
+  transition: background-color 0.5s; }
+
+.nav-pills li.active a, .nav-pills li.active a:focus, .nav-pills li.active a:hover {
+  background-color: #111;
+  border-radius: 0; }
+
+.business-header {
+  height: 693px;
+  width: auto; }
+  .business-header h1 {
+    color: white;
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.9); }
+  .business-header p {
+    font-family: 'Courgette', cursive;
+    color: white; }
+
+.navbar {
+  margin-bottom: 0px;
+  border-radius: 0px;
+  min-height: 40px; }
+  .navbar a {
+    font-weight: 100;
+    color: white;
+    font-size: 18px; }
+
+.bg-about {
+  background-color: #2bb3dd;
+  color: white; }
+  .bg-about .img-circle {
+    border: 3px solid white;
+    margin-bottom: 20px; }
+  .bg-about .about {
+    margin-bottom: 50px; }
+    .bg-about .about h2 {
+      margin-bottom: 10px; }
+    @media (max-width: 767px) {
+      .bg-about .about p, .bg-about .about span {
+        font-size: 18px; } }
+  .bg-about h2 {
+    margin-bottom: 50px; }
+    @media (max-width: 767px) {
+      .bg-about h2 {
+        font-size: 38px; } }
+  .bg-about span {
+    font-size: 18px;
+    color: white;
+    font-weight: 100; }
+
+.bg-work, .bg-skills {
+  background-color: #f5f5f5; }
+  .bg-work .pie_progress, .bg-skills .pie_progress {
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 25px; }
+  .bg-work .pie_progress__number, .bg-skills .pie_progress__number {
+    font-size: 26px; }
+  .bg-work .pie_progress__label, .bg-skills .pie_progress__label {
+    margin-top: 20px; }
+  @media (max-width: 480px) {
+    .bg-work h2, .bg-skills h2 {
+      font-size: 38px; } }
+  .bg-work p, .bg-skills p {
+    font-size: 24px;
+    color: #000; }
+
+.bg-education {
+  background-color: #00D6D6;
+  color: white; }
+  .bg-education h2 {
+    margin-bottom: 50px; }
+    @media (max-width: 767px) {
+      .bg-education h2 {
+        font-size: 38px; } }
+  .bg-education p {
+    font-size: 18px;
+    font-weight: 300; }
+    @media (max-width: 767px) {
+      .bg-education p {
+        font-size: 14px; } }
+  .bg-education h3 {
+    font-weight: 300; }
+    @media (max-width: 767px) {
+      .bg-education h3 {
+        font-size: 18px; } }
+
+.bg-skills h3 {
+  font-weight: 400; }
+  @media (max-width: 767px) {
+    .bg-skills h3 {
+      font-size: 22px; } }
+
+.bg-portfolio {
+  background-color: #2bb3dd;
+  color: white; }
+  @media (max-width: 767px) {
+    .bg-portfolio h2 {
+      font-size: 38px; } }
+  .bg-portfolio img {
+    margin-bottom: 25px; }
+    .bg-portfolio img:hover {
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.9);
+      transition: box-shadow 0.5s; }
+  .bg-portfolio .img-animations .panel-default {
+    border-radius: 0; }
+    .bg-portfolio .img-animations .panel-default .panel-heading {
+      font-size: 16px; }
+  .bg-portfolio .btn-group-justified .btn-group .btn {
+    width: 98%; }
+  .bg-portfolio .btn-group-justified button {
+    background-color: #2bb3dd;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 0;
+    border-color: white; }
+    @media (max-width: 767px) {
+      .bg-portfolio .btn-group-justified button {
+        font-size: 14px; } }
+    .bg-portfolio .btn-group-justified button:hover {
+      color: #15596e;
+      border-color: #15596e;
+      background: none;
+      transition: all 0.7s; }
+
+.bg-contact {
+  background-color: #f5f5f5; }
+  .bg-contact h2 {
+    margin-bottom: 35px; }
+    @media (max-width: 767px) {
+      .bg-contact h2 {
+        font-size: 32px; } }
+  .bg-contact p, .bg-contact label {
+    font-size: 18px;
+    font-weight: 400; }
+  .bg-contact .form-horizontal .form-group {
+    margin-left: 0; }
+  .bg-contact address strong {
+    margin-bottom: 20px; }
+  .bg-contact address div {
+    margin-bottom: 5px; }
+  .bg-contact .btn-primary {
+    background: none;
+    color: #15596e;
+    font-size: 18px;
+    border-radius: 0;
+    border-color: #15596e;
+    margin-top: 20px; }
+    .bg-contact .btn-primary:hover, .bg-contact .btn-primary:active, .bg-contact .btn-primary:focus {
+      color: white;
+      background-color: #15596e;
+      border-radius: 0;
+      border-color: white;
+      transition: all 0.7s; }
+
+footer {
+  background-color: #111;
+  color: white; }
+  footer i {
+    color: white;
+    font-size: 22px; }
+    footer i:hover {
+      font-size: 21px;
+      transition: font-size 0.1s; }
+  footer p {
+    border-top: 1px solid #222;
+    padding-top: 15px;
+    font-size: 14px; }
+  footer .bg-icon {
+    margin: 15px 0;
+    padding: 10px 0; }
+  footer .icon-github:hover {
+    color: #444;
+    transition: all 0.7s; }
+  footer .icon-bitbucket:hover {
+    color: #093654;
+    transition: all 0.7s; }
+  footer .icon-facebook:hover {
+    color: #3b5998;
+    transition: all 0.7s; }
+  footer .icon-youtube:hover {
+    color: #C63619;
+    transition: all 0.7s; }
+  footer .icon-deviantart:hover {
+    color: green;
+    transition: all 0.7s; }
+  footer .icon-cube:hover {
+    color: #133783;
+    transition: all 0.7s; }
