@@ -157,13 +157,19 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center well">
                             <h3>Designer</h3>
                         </div>
-                        <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-3 col-md-offset-3 col-lg-3 col-lg-offset-3">
+                        <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
                             <div class="pie_progress" role="progressbar" data-goal="40">
                                 <div class="pie_progress__number">0%</div>
                                 <div class="pie_progress__label">Gimp</div>
                             </div>
                         </div>
-                        <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0">
+                        <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
+                            <div class="pie_progress" role="progressbar" data-goal="40">
+                                <div class="pie_progress__number">0%</div>
+                                <div class="pie_progress__label">Inkscape</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
                             <div class="pie_progress" role="progressbar" data-goal="60">
                                 <div class="pie_progress__number">0%</div>
                                 <div class="pie_progress__label">Blender</div>
@@ -218,6 +224,9 @@
                         </div>
                         <div class="btn-group" role="group">
                             <button type="button" class="app-btn-animations btn btn-default">Animations</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="app-btn-svg btn btn-default">SVG</button>
                         </div>
                     </div>
                 </div>
@@ -396,6 +405,108 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row img-svg hide">
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/airport.svg" data-lightbox="example-set" data-title="At the airport. Bob as a tourist.">
+                                <img class="img-responsive example-image" src="/app/svg/airport.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/airplane.svg" data-lightbox="example-set" data-title="On board plane. Alice as a Stewardess.">
+                                <img class="img-responsive example-image" src="/app/svg/airplane.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/airport_baggage.svg" data-lightbox="example-set" data-title="Check out baggage. Charles as a Controller.">
+                                <img class="img-responsive example-image" src="/app/svg/airport_baggage.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/airport_departures.svg" data-lightbox="example-set" data-title="Airport departures. Charles as a Passport Controller.">
+                                <img class="img-responsive example-image" src="/app/svg/airport_departures.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/baggage_claim.svg" data-lightbox="example-set" data-title="Airport baggage claim. Alice as a tourist.">
+                                <img class="img-responsive example-image" src="/app/svg/baggage_claim.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/bank.svg" data-lightbox="example-set" data-title="The VN Bank. Bob as a bank employee.">
+                                <img class="img-responsive example-image" src="/app/svg/bank.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/bar.svg" data-lightbox="example-set" data-title="The Bar. Bob as a barman.">
+                                <img class="img-responsive example-image" src="/app/svg/bar.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/bus.svg" data-lightbox="example-set" data-title="The Bus. Charles as a bus driver.">
+                                <img class="img-responsive example-image" src="/app/svg/bus.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/cafe.svg" data-lightbox="example-set" data-title="The Alice's Caffee. Alice as a shop assistant.">
+                                <img class="img-responsive example-image" src="/app/svg/cafe.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/clothes-shop.svg" data-lightbox="example-set" data-title="The Clothes Shop. Dorothy as a shop assistant.">
+                                <img class="img-responsive example-image" src="/app/svg/clothes-shop.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/doctor's_office.svg" data-lightbox="example-set" data-title="The Doctor's office. Charles as a doctor.">
+                                <img class="img-responsive example-image" src="/app/svg/doctor's_office.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/hotel.svg" data-lightbox="example-set" data-title="The Hotel. Charles as a receptionist.">
+                                <img class="img-responsive example-image" src="/app/svg/hotel.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/job_agency.svg" data-lightbox="example-set" data-title="The Employment Agency. Bob as a clerk.">
+                                <img class="img-responsive example-image" src="/app/svg/job_agency.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/restaurant.svg" data-lightbox="example-set" data-title="The Restaurant. Bob as a waiter.">
+                                <img class="img-responsive example-image" src="/app/svg/restaurant.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/shop.svg" data-lightbox="example-set" data-title="The Shop. Dorothy as a shop assistant.">
+                                <img class="img-responsive example-image" src="/app/svg/shop.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/station.svg" data-lightbox="example-set" data-title="The Station. Charles as a ticket seller.">
+                                <img class="img-responsive example-image" src="/app/svg/station.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/table in restaurant.svg" data-lightbox="example-set" data-title="At the Restaurant. Alice as a customer.">
+                                <img class="img-responsive example-image" src="/app/svg/table in restaurant.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/taxi.svg" data-lightbox="example-set" data-title="Taxi. Charles as a taxi driver.">
+                                <img class="img-responsive example-image" src="/app/svg/taxi.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/train.svg" data-lightbox="example-set" data-title="At the train. Alice as a conductor.">
+                                <img class="img-responsive example-image" src="/app/svg/train.svg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <a class="example-image-link" href="/app/svg/police.svg" data-lightbox="example-set" data-title="Police. Dorothy as a police officer.">
+                                <img class="img-responsive example-image" src="/app/svg/police.svg">
+                            </a>
                         </div>
                     </div>
                 </div>

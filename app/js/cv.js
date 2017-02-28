@@ -18,9 +18,11 @@ $(function() {
     var $draw = $('.img-drawings');
     var $render = $('.img-renders');
     var $animation = $('.img-animations');
+    var $svg = $('.img-svg');
     var $btnAnimations = $('.app-btn-animations');
     var $btnRender = $('.app-btn-renders');
     var $btnDraw = $('.app-btn-drawings');
+    var $btnSVG = $('.app-btn-svg');
 
     var $video = $('.video');
 
@@ -29,9 +31,11 @@ $(function() {
         $(this).addClass('active-btn-portfolio');
         $btnDraw.removeClass('active-btn-portfolio');
         $btnAnimations.removeClass('active-btn-portfolio');
+        $btnSVG.removeClass('active-btn-portfolio');
 
         $draw.addClass('hide');
         $animation.addClass('hide');
+        $svg.addClass('hide');
         $render.removeClass('hide');
 
     });
@@ -41,9 +45,11 @@ $(function() {
         $(this).addClass('active-btn-portfolio');
         $btnRender.removeClass('active-btn-portfolio');
         $btnAnimations.removeClass('active-btn-portfolio');
+        $btnSVG.removeClass('active-btn-portfolio');
 
         $render.addClass('hide');
         $animation.addClass('hide');
+        $svg.addClass('hide');
         $draw.removeClass('hide');
 
     });
@@ -53,10 +59,26 @@ $(function() {
         $(this).addClass('active-btn-portfolio');
         $btnDraw.removeClass('active-btn-portfolio');
         $btnRender.removeClass('active-btn-portfolio');
+        $btnSVG.removeClass('active-btn-portfolio');
 
         $render.addClass('hide');
         $draw.addClass('hide');
-        $animation.removeClass('hide')
+        $svg.addClass('hide');
+        $animation.removeClass('hide');
+
+    });
+
+    $btnSVG.on('click', function() {
+
+        $(this).addClass('active-btn-portfolio');
+        $btnDraw.removeClass('active-btn-portfolio');
+        $btnRender.removeClass('active-btn-portfolio');
+        $btnAnimations.removeClass('active-btn-portfolio');
+
+        $render.addClass('hide');
+        $draw.addClass('hide');
+        $animation.addClass('hide');
+        $svg.removeClass('hide');
 
     });
 
