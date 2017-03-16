@@ -34,6 +34,15 @@ p {
     display: none;
 }
 
+.show-more {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+        color: $baseColor2
+    }
+}
+
 .body-page {
     padding: 100px 0;
 }
@@ -226,7 +235,7 @@ p {
     }
 }
 
-.bg-work, .bg-skills {
+.bg-work, .bg-skills, .bg-scripts {
     background-color: #f5f5f5;
 
     .pie_progress {
@@ -338,7 +347,7 @@ p {
             border-color: white;
 
             @include respond-to(xl) {
-                font-size: 14px;
+                font-size: 10px;
             }
 
             &:hover {
@@ -347,6 +356,60 @@ p {
                 background: none;
                 transition: all 0.7s;
             }
+        }
+    }
+}
+
+.bg-scripts {
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    h3 {
+        font-weight: 300;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 30px;
+        list-style-type: none;
+
+        li {
+            position: relative;
+            border-left: 1px solid grey;
+            padding-left: 10px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: grey;
+
+            &::before {
+                content: '•';
+                position: absolute;
+                top: -8px;
+                left: -6px;
+                font-size: 32px;
+                color: grey;
+            }
+
+            a {
+                display: block;
+                font-size: 16px;
+                font-weight: 300;
+                text-decoration: underline;
+
+                @include respond-to(xl) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    h3 {
+        @include respond-to(xl) {
+            font-size: 22px;
         }
     }
 }
@@ -426,31 +489,31 @@ footer {
 
     .icon-github:hover {
         color: #444;
-        transition: all 0.7s;
+        transition: color 0.1s;
     }
 
     .icon-bitbucket:hover {
         color: #093654;
-        transition: all 0.7s;
+        transition: color 0.1s;
     }
 
     .icon-facebook:hover {
         color: #3b5998;
-        transition: all 0.7s;
+        transition: color 0.1s;
     }
 
     .icon-youtube:hover {
         color: #C63619;
-        transition: all 0.7s;
+        transition: color 0.1s;
     }
 
     .icon-deviantart:hover {
         color: green;
-        transition: all 0.7s;
+        transition: color 0.1s;
     }
 
     .icon-cube:hover {
         color: #133783;
-        transition: all 0.7s;
+        transition: color 0.1s;
     }
 }

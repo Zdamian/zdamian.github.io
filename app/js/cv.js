@@ -23,8 +23,18 @@ $(function() {
     var $btnRender = $('.app-btn-renders');
     var $btnDraw = $('.app-btn-drawings');
     var $btnSVG = $('.app-btn-svg');
-
+    var $scriptList = $('.script-list');
     var $video = $('.video');
+    var $li = $('<li class="show-more">Show more...</li>');
+
+    $scriptList.append($li);
+
+    $scriptList.on('click', '.show-more', function() {
+
+        $(this).prevAll().removeClass('hide');
+        $(this).remove();
+
+    });
 
     $btnRender.on('click', function() {
 

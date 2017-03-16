@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* -------------------------------------------------------------
   Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
   By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
@@ -36,6 +37,12 @@ p {
 
 .hide {
   display: none; }
+
+.show-more {
+  color: #337ab7;
+  cursor: pointer; }
+  .show-more:hover {
+    color: #003D5B; }
 
 .body-page {
   padding: 100px 0; }
@@ -184,20 +191,20 @@ p {
     color: white;
     font-weight: 100; }
 
-.bg-work, .bg-skills {
+.bg-work, .bg-skills, .bg-scripts {
   background-color: #f5f5f5; }
-  .bg-work .pie_progress, .bg-skills .pie_progress {
+  .bg-work .pie_progress, .bg-skills .pie_progress, .bg-scripts .pie_progress {
     width: 100px;
     margin: 0 auto;
     margin-bottom: 25px; }
-  .bg-work .pie_progress__number, .bg-skills .pie_progress__number {
+  .bg-work .pie_progress__number, .bg-skills .pie_progress__number, .bg-scripts .pie_progress__number {
     font-size: 26px; }
-  .bg-work .pie_progress__label, .bg-skills .pie_progress__label {
+  .bg-work .pie_progress__label, .bg-skills .pie_progress__label, .bg-scripts .pie_progress__label {
     margin-top: 20px; }
   @media (max-width: 480px) {
-    .bg-work h2, .bg-skills h2 {
+    .bg-work h2, .bg-skills h2, .bg-scripts h2 {
       font-size: 38px; } }
-  .bg-work p, .bg-skills p {
+  .bg-work p, .bg-skills p, .bg-scripts p {
     font-size: 24px;
     color: #000; }
 
@@ -253,12 +260,51 @@ p {
     border-color: white; }
     @media (max-width: 767px) {
       .bg-portfolio .btn-group-justified button {
-        font-size: 14px; } }
+        font-size: 10px; } }
     .bg-portfolio .btn-group-justified button:hover {
       color: #15596e;
       border-color: #15596e;
       background: none;
       transition: all 0.7s; }
+
+.bg-scripts h2 {
+  margin-bottom: 50px; }
+
+.bg-scripts h3 {
+  font-weight: 300; }
+
+.bg-scripts ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  list-style-type: none; }
+  .bg-scripts ul li {
+    position: relative;
+    border-left: 1px solid grey;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: grey; }
+    .bg-scripts ul li::before {
+      content: '•';
+      position: absolute;
+      top: -8px;
+      left: -6px;
+      font-size: 32px;
+      color: grey; }
+    .bg-scripts ul li a {
+      display: block;
+      font-size: 16px;
+      font-weight: 300;
+      text-decoration: underline; }
+      @media (max-width: 767px) {
+        .bg-scripts ul li a {
+          font-size: 14px; } }
+
+@media (max-width: 767px) {
+  .bg-scripts h3 {
+    font-size: 22px; } }
 
 .bg-contact {
   background-color: #f5f5f5; }
@@ -308,19 +354,19 @@ footer {
     padding: 10px 0; }
   footer .icon-github:hover {
     color: #444;
-    transition: all 0.7s; }
+    transition: color 0.1s; }
   footer .icon-bitbucket:hover {
     color: #093654;
-    transition: all 0.7s; }
+    transition: color 0.1s; }
   footer .icon-facebook:hover {
     color: #3b5998;
-    transition: all 0.7s; }
+    transition: color 0.1s; }
   footer .icon-youtube:hover {
     color: #C63619;
-    transition: all 0.7s; }
+    transition: color 0.1s; }
   footer .icon-deviantart:hover {
     color: green;
-    transition: all 0.7s; }
+    transition: color 0.1s; }
   footer .icon-cube:hover {
     color: #133783;
-    transition: all 0.7s; }
+    transition: color 0.1s; }
