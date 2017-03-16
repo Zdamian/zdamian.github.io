@@ -171,16 +171,28 @@ p {
 .bg-about {
   background-color: #2bb3dd;
   color: white; }
-  .bg-about .img-circle {
-    border: 3px solid white;
+  .bg-about .example-image {
     margin-bottom: 20px; }
-  .bg-about .about {
+  .bg-about .about, .bg-about .circle {
+    position: relative;
+    border-bottom: 1px solid grey;
     margin-bottom: 50px; }
-    .bg-about .about h2 {
+    .bg-about .about::after, .bg-about .circle::after {
+      content: '•';
+      position: absolute;
+      top: 58px;
+      left: 50%;
+      font-size: 60px;
+      color: grey; }
+    .bg-about .about h2, .bg-about .circle h2 {
       margin-bottom: 10px; }
     @media (max-width: 767px) {
-      .bg-about .about p, .bg-about .about span {
+      .bg-about .about p, .bg-about .about span, .bg-about .circle p, .bg-about .circle span {
         font-size: 18px; } }
+  .bg-about .circle {
+    padding-bottom: 15px; }
+    .bg-about .circle::after {
+      top: 30px; }
   .bg-about h2 {
     margin-bottom: 50px; }
     @media (max-width: 767px) {

@@ -200,13 +200,23 @@ p {
     background-color: $backgroundAbout;
     color: white;
 
-    .img-circle {
-        border: 3px solid white;
+    .example-image {
         margin-bottom: 20px;
     }
 
-    .about {
+    .about, .circle {
+        position: relative;
+        border-bottom: 1px solid grey;
         margin-bottom: 50px;
+
+        &::after {
+            content: '•';
+            position: absolute;
+            top: 58px;
+            left: 50%;
+            font-size: 60px;
+            color: grey;
+        }
 
         h2 {
             margin-bottom: 10px;
@@ -217,6 +227,14 @@ p {
             @include respond-to(xl) {
                 font-size: 18px;
             }
+        }
+    }
+
+    .circle {
+        padding-bottom: 15px; 
+
+        &::after {
+            top: 30px;
         }
     }
 
