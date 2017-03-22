@@ -31,8 +31,10 @@ $(function() {
 
     $scriptList.on('click', '.show-more', function() {
 
-        $(this).prevAll().removeClass('hide');
-        $(this).remove();
+        var $this = $(this);
+
+        $this.prevAll().removeClass('hide');
+        $this.remove();
 
     });
 
@@ -141,23 +143,23 @@ $(function() {
         }
     });
 
-    var $animation_elements = $('.skill');
+    var $animationElements = $('.skill');
     var $window = $(window);
 
-    function check_if_in_view() {
-        var window_height = $window.height();
-        var window_top_position = $window.scrollTop();
-        var window_bottom_position = (window_top_position + window_height);
+    function checkIfInView() {
+        var windowHeight = $window.height();
+        var windowTopPosition = $window.scrollTop();
+        var windowBottomPosition = (windowTopPosition + windowHeight);
 
-        $.each($animation_elements, function() {
+        $.each($animationElements, function() {
             var $element = $(this);
-            var element_height = $element.outerHeight();
-            var element_top_position = $element.offset().top;
-            var element_bottom_position = (element_top_position + element_height);
+            var elementHeight = $element.outerHeight();
+            var elementTopPosition = $element.offset().top;
+            var elementBottomPosition = (elementTopPosition + elementHeight);
 
             //check to see if this current container is within viewport
-            if ((element_bottom_position >= window_top_position) &&
-                (element_top_position <= window_bottom_position)) {
+            if ((elementBottomPosition >= windowTopPosition) &&
+                (elementTopPosition <= windowBottomPosition)) {
 
                 setTimeout(function() {
                     $('.pie_progress').asPieProgress('start');
@@ -169,13 +171,16 @@ $(function() {
         });
     }
 
-    $window.on('scroll resize', check_if_in_view);
+    $window.on('scroll resize', checkIfInView);
     $window.trigger('scroll');
 
     $('.icon').on('click', function() {
-        $(this).parent('.overlay').addClass('hide');
-        $(this).parent('.overlay').parent('.wrapper').find('.overlay-title').addClass('hide');
-        var $autoplay = $(this).parent('.overlay').prev().find('video');
+
+        var $overlay = $(this).parent('.overlay');
+
+        $overlay.addClass('hide');
+        $overlay.parent('.wrapper').find('.overlay-title').addClass('hide');
+        var $autoplay = $overlay.prev().find('video');
         $autoplay.attr('controls', 'controls');
         $autoplay.get(0).play();
     });
