@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* -------------------------------------------------------------
   Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
   By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
@@ -18,6 +19,12 @@ h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 42px;
   font-weight: 300; }
+  @media (max-width: 767px) {
+    h2 {
+      font-size: 38px; } }
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 30px; } }
 
 h3 {
   font-family: 'Roboto', sans-serif;
@@ -36,6 +43,12 @@ p {
 
 .hide {
   display: none; }
+
+.show-more {
+  color: #15596e;
+  cursor: pointer; }
+  .show-more:hover {
+    color: #0C3542; }
 
 .body-page {
   padding: 100px 0; }
@@ -114,7 +127,7 @@ p {
   font-size: 120px; }
 
 .active-btn-portfolio {
-  background-color: #15596e !important;
+  background-color: #0C3542 !important;
   border-color: white;
   color: white !important; }
   .active-btn-portfolio:hover {
@@ -162,53 +175,93 @@ p {
     font-size: 18px; }
 
 .bg-about {
-  background-color: #2bb3dd;
-  color: white; }
-  .bg-about .img-circle {
-    border: 3px solid white;
+  background-image: url("../images/sky.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 0;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
+  .bg-about .bg-front-about {
+    background: linear-gradient(0deg, rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.6));
+    padding: 100px 0;
+    margin: 0; }
+  .bg-about .example-image {
     margin-bottom: 20px; }
-  .bg-about .about {
+  .bg-about .about, .bg-about .circle {
+    position: relative;
+    border-bottom: 1px solid grey;
     margin-bottom: 50px; }
-    .bg-about .about h2 {
+    .bg-about .about::after, .bg-about .circle::after {
+      content: '•';
+      position: absolute;
+      top: 58px;
+      left: 50%;
+      font-size: 60px;
+      color: grey; }
+      @media (max-width: 767px) {
+        .bg-about .about::after, .bg-about .circle::after {
+          top: 45px;
+          left: 47%; } }
+      @media (max-width: 480px) {
+        .bg-about .about::after, .bg-about .circle::after {
+          top: 32px; } }
+    .bg-about .about h2, .bg-about .circle h2 {
       margin-bottom: 10px; }
     @media (max-width: 767px) {
-      .bg-about .about p, .bg-about .about span {
+      .bg-about .about p, .bg-about .about span, .bg-about .circle p, .bg-about .circle span {
         font-size: 18px; } }
+    @media (max-width: 480px) {
+      .bg-about .about p, .bg-about .about span, .bg-about .circle p, .bg-about .circle span {
+        font-size: 14px; } }
+  .bg-about .circle {
+    padding-bottom: 15px; }
+    .bg-about .circle::after {
+      top: 30px; }
+      @media (max-width: 767px) {
+        .bg-about .circle::after {
+          top: 25px; } }
+      @media (max-width: 480px) {
+        .bg-about .circle::after {
+          top: 16px; } }
   .bg-about h2 {
     margin-bottom: 50px; }
-    @media (max-width: 767px) {
-      .bg-about h2 {
-        font-size: 38px; } }
   .bg-about span {
     font-size: 18px;
     color: white;
     font-weight: 100; }
 
-.bg-work, .bg-skills {
+.bg-work, .bg-skills, .bg-scripts {
   background-color: #f5f5f5; }
-  .bg-work .pie_progress, .bg-skills .pie_progress {
+  .bg-work .pie_progress, .bg-skills .pie_progress, .bg-scripts .pie_progress {
     width: 100px;
     margin: 0 auto;
     margin-bottom: 25px; }
-  .bg-work .pie_progress__number, .bg-skills .pie_progress__number {
+  .bg-work .pie_progress__number, .bg-skills .pie_progress__number, .bg-scripts .pie_progress__number {
     font-size: 26px; }
-  .bg-work .pie_progress__label, .bg-skills .pie_progress__label {
+  .bg-work .pie_progress__label, .bg-skills .pie_progress__label, .bg-scripts .pie_progress__label {
     margin-top: 20px; }
-  @media (max-width: 480px) {
-    .bg-work h2, .bg-skills h2 {
-      font-size: 38px; } }
-  .bg-work p, .bg-skills p {
+  .bg-work p, .bg-skills p, .bg-scripts p {
     font-size: 24px;
     color: #000; }
 
 .bg-education {
-  background-color: #00D6D6;
-  color: white; }
+  background-image: url("../images/penguins.jpg");
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-repeat: repeat;
+  background-position: center;
+  padding: 0; }
+  @media (max-width: 1199px) {
+    .bg-education {
+      background-size: auto 100%; } }
+  .bg-education .bg-front-about {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+    padding: 100px 0;
+    margin: 0; }
   .bg-education h2 {
     margin-bottom: 50px; }
-    @media (max-width: 767px) {
-      .bg-education h2 {
-        font-size: 38px; } }
   .bg-education p {
     font-size: 18px;
     font-weight: 300; }
@@ -228,11 +281,20 @@ p {
       font-size: 22px; } }
 
 .bg-portfolio {
-  background-color: #2bb3dd;
+  background-image: url("../images/landspace.jpg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0;
   color: white; }
-  @media (max-width: 767px) {
-    .bg-portfolio h2 {
-      font-size: 38px; } }
+  .bg-portfolio .bg-front-portfolio {
+    background: linear-gradient(0deg, rgba(1, 1, 1, 0.3), rgba(255, 255, 255, 0.1));
+    padding: 100px 0;
+    margin: 0; }
+  .bg-portfolio h2 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
+  .bg-portfolio p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
   .bg-portfolio img {
     margin-bottom: 25px; }
     .bg-portfolio img:hover {
@@ -245,28 +307,79 @@ p {
   .bg-portfolio .btn-group-justified .btn-group .btn {
     width: 98%; }
   .bg-portfolio .btn-group-justified button {
-    background-color: #2bb3dd;
+    background-color: #15596e;
     color: white;
     font-size: 18px;
     font-weight: 300;
     border-radius: 0;
-    border-color: white; }
+    border-color: white;
+    outline: 0; }
     @media (max-width: 767px) {
       .bg-portfolio .btn-group-justified button {
-        font-size: 14px; } }
+        font-size: 10px; } }
     .bg-portfolio .btn-group-justified button:hover {
-      color: #15596e;
-      border-color: #15596e;
+      color: #0C3542;
+      border-color: #0C3542;
       background: none;
       transition: all 0.7s; }
 
+.bg-scripts h2 {
+  margin-bottom: 50px; }
+
+.bg-scripts h3 {
+  font-weight: 300; }
+  @media (max-width: 767px) {
+    .bg-scripts h3 {
+      font-size: 22px; } }
+
+.bg-scripts ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  list-style-type: none; }
+  .bg-scripts ul li {
+    position: relative;
+    border-left: 1px solid grey;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: grey; }
+    .bg-scripts ul li::before {
+      content: '•';
+      position: absolute;
+      top: -8px;
+      left: -6px;
+      font-size: 32px;
+      color: grey; }
+    .bg-scripts ul li a {
+      display: block;
+      font-size: 16px;
+      font-weight: 300;
+      text-decoration: underline;
+      color: #15596e; }
+      .bg-scripts ul li a:hover {
+        color: #0C3542; }
+      @media (max-width: 767px) {
+        .bg-scripts ul li a {
+          font-size: 14px; } }
+
 .bg-contact {
-  background-color: #f5f5f5; }
+  background-image: url("../images/ultron_bot.jpg");
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0; }
+  @media (max-width: 1199px) {
+    .bg-contact {
+      background-size: auto 100%; } }
+  .bg-contact .bg-front-contact {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+    padding: 100px 0;
+    margin: 0; }
   .bg-contact h2 {
     margin-bottom: 35px; }
-    @media (max-width: 767px) {
-      .bg-contact h2 {
-        font-size: 32px; } }
   .bg-contact p, .bg-contact label {
     font-size: 18px;
     font-weight: 400; }
@@ -308,19 +421,19 @@ footer {
     padding: 10px 0; }
   footer .icon-github:hover {
     color: #444;
-    transition: all 0.7s; }
+    transition: color 0.1s; }
   footer .icon-bitbucket:hover {
     color: #093654;
-    transition: all 0.7s; }
+    transition: color 0.1s; }
   footer .icon-facebook:hover {
     color: #3b5998;
-    transition: all 0.7s; }
+    transition: color 0.1s; }
   footer .icon-youtube:hover {
     color: #C63619;
-    transition: all 0.7s; }
+    transition: color 0.1s; }
   footer .icon-deviantart:hover {
     color: green;
-    transition: all 0.7s; }
+    transition: color 0.1s; }
   footer .icon-cube:hover {
     color: #133783;
-    transition: all 0.7s; }
+    transition: color 0.1s; }
