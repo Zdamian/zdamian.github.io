@@ -11,11 +11,11 @@ h2 {
     font-size: 42px;
     font-weight: 300;
 
-    @include respond-to(xl) {
+    @include media-down(small) {
         font-size: 38px;
     }
 
-    @include respond-to(xs) {
+    @include media-down(xsmall) {
         font-size: 30px;
     }
 }
@@ -101,7 +101,7 @@ p {
   height: 98%;
   background: rgba(0,0,0,0.2);
 
-  @include respond-to(xl) {
+  @include media-down(small) {
         height: 97%;
     }
 }
@@ -237,12 +237,12 @@ p {
             font-size: 60px;
             color: $color_border_scripts;
 
-            @include respond-to(xl) {
+            @include media-down(small) {
                 top: 45px;
                 left: 47%;
             }
 
-            @include respond-to(xs) {
+            @include media-down(xsmall) {
                 top: 32px;
             }
         }
@@ -253,11 +253,11 @@ p {
 
         p, span {
 
-            @include respond-to(xl) {
+            @include media-down(small) {
                 font-size: 18px;
             }
 
-            @include respond-to(xs) {
+            @include media-down(xsmall) {
                 font-size: 14px;
             }
         }
@@ -269,11 +269,11 @@ p {
         &::after {
             top: 30px;
 
-            @include respond-to(xl) {
+            @include media-down(small) {
                 top: 25px;
             }
 
-            @include respond-to(xs) {
+            @include media-down(xsmall) {
                 top: 16px;
             }
         }
@@ -321,7 +321,7 @@ p {
     background-position: center;
     padding: 0;
 
-    @include respond-to(md) {
+    @include media-down(large) {
         background-size: auto 100%;
     }
 
@@ -339,7 +339,7 @@ p {
         font-size: 18px;
         font-weight: 300;
 
-        @include respond-to(xl) {
+        @include media-down(small) {
             font-size: 14px;
         }
     }
@@ -347,7 +347,7 @@ p {
     h3 {
         font-weight: 300;
 
-        @include respond-to(xl) {
+        @include media-down(small) {
             font-size: 18px;
         }
     }
@@ -358,7 +358,7 @@ p {
     h3 {
         font-weight: 400;
 
-        @include respond-to(xl) {
+        @include media-down(small) {
             font-size: 22px;
         }
     }
@@ -418,7 +418,7 @@ p {
             border-color: white;
             outline: 0;
 
-            @include respond-to(xl) {
+            @include media-down(small) {
                 font-size: 10px;
             }
 
@@ -441,7 +441,7 @@ p {
     h3 {
         font-weight: 300;
 
-        @include respond-to(xl) {
+        @include media-down(small) {
             font-size: 22px;
         }
     }
@@ -481,7 +481,7 @@ p {
                     color: $color_hover_button_links;
                 }
 
-                @include respond-to(xl) {
+                @include media-down(small) {
                     font-size: 14px;
                 }
             }
@@ -497,7 +497,7 @@ p {
     background-position: center;
     padding: 0;
 
-    @include respond-to(md) {
+    @include media-down(large) {
         background-size: auto 100%;
     }
 

@@ -22,7 +22,7 @@ h2 {
   @media (max-width: 767px) {
     h2 {
       font-size: 38px; } }
-  @media (max-width: 480px) {
+  @media (max-width: 575px) {
     h2 {
       font-size: 30px; } }
 
@@ -204,7 +204,7 @@ p {
         .bg-about .about::after, .bg-about .circle::after {
           top: 45px;
           left: 47%; } }
-      @media (max-width: 480px) {
+      @media (max-width: 575px) {
         .bg-about .about::after, .bg-about .circle::after {
           top: 32px; } }
     .bg-about .about h2, .bg-about .circle h2 {
@@ -212,7 +212,7 @@ p {
     @media (max-width: 767px) {
       .bg-about .about p, .bg-about .about span, .bg-about .circle p, .bg-about .circle span {
         font-size: 18px; } }
-    @media (max-width: 480px) {
+    @media (max-width: 575px) {
       .bg-about .about p, .bg-about .about span, .bg-about .circle p, .bg-about .circle span {
         font-size: 14px; } }
   .bg-about .circle {
@@ -222,7 +222,7 @@ p {
       @media (max-width: 767px) {
         .bg-about .circle::after {
           top: 25px; } }
-      @media (max-width: 480px) {
+      @media (max-width: 575px) {
         .bg-about .circle::after {
           top: 16px; } }
   .bg-about h2 {
