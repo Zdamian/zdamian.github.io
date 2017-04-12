@@ -26,6 +26,19 @@ $(function() {
     var $scriptList = $('.script-list');
     var $video = $('.video');
     var $li = $('<li class="show-more">Show more...</li>');
+    var $menu = $('.navbar-collapse');
+    var $menuLink = $('.btn-link');
+
+    $(document).on('click', function(e) {
+
+        if (!$menu[0].contains(e.target)) {
+            $menu.removeClass('in');
+        }
+    });
+
+    $menuLink.on('click', function(e) {
+        $menu.removeClass('in');
+    });
 
     $scriptList.append($li);
 
@@ -144,6 +157,7 @@ $(function() {
     });
 
     var $animationElements = $('.skill');
+    var $elementsFadeIn = $('.fade-in');
     var $window = $(window);
 
     function checkIfInView() {
@@ -167,6 +181,21 @@ $(function() {
 
             } else {
                 $('.pie_progress').asPieProgress('stop');
+            }
+        });
+
+        $.each($elementsFadeIn, function() {
+            var $element = $(this);
+            var elementHeight = $element.outerHeight();
+            var elementTopPosition = $element.offset().top;
+            var elementBottomPosition = (elementTopPosition + elementHeight);
+
+            //check to see if this current container is within viewport
+            if ((elementBottomPosition >= windowTopPosition) &&
+                (elementTopPosition <= windowBottomPosition)) {
+
+                $element.addClass('animation-fade-in');
+
             }
         });
     }

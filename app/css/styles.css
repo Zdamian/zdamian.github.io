@@ -270,8 +270,8 @@ p {
   margin-bottom: 0px;
   border-radius: 0px;
   min-height: 40px; }
-  .navbar a {
-    font-weight: 100;
+  .navbar .navbar-collapse .nav a {
+    font-weight: 300;
     color: #fff;
     font-size: 18px; }
 
@@ -544,3 +544,26 @@ footer {
   footer .icon-cube:hover {
     color: #133783;
     transition: color 0.1s; }
+
+.fade-in-left {
+  transform: translate(-100px, 0);
+  opacity: 0; }
+
+.fade-in-right {
+  transform: translate(50px, 0); }
+  @media (max-width: 575px) {
+    .fade-in-right {
+      transform: translate(20px, 0); } }
+
+.fade-in-top {
+  transform: translate(0, -200px);
+  opacity: 0; }
+
+.fade-in-down {
+  transform: translate(0, 100px);
+  opacity: 0; }
+
+.animation-fade-in {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: transform 1s linear, opacity .5s linear; }
