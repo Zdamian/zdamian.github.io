@@ -4,30 +4,28 @@
 
 body {
     position: relative;
+    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
     font-size: 42px;
     font-weight: 300;
 
-    @include respond-to(xl) {
+    @include media-down(small) {
         font-size: 38px;
     }
 
-    @include respond-to(xs) {
+    @include media-down(xsmall) {
         font-size: 30px;
     }
 }
 
 h3 {
-    font-family: 'Roboto', sans-serif;
     margin-top: 0px;
     font-weight: 100;
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: 100;
 }
@@ -43,11 +41,11 @@ p {
 }
 
 .show-more {
-    color: $color_button_links;
+    color: $button_links_color;
     cursor: pointer;
 
     &:hover {
-        color: $color_hover_button_links;
+        color: #185571;
     }
 }
 
@@ -63,6 +61,136 @@ p {
     width: 260px;
     border-radius: 50%;
     margin-top: 15px;
+}
+
+.about {
+    position: relative;
+    border-bottom: 1px solid $font_and_border_color;
+    margin-bottom: 50px;
+
+    &::after {
+        content: '•';
+        position: absolute;
+        top: 58px;
+        left: 49%;
+        font-size: 60px;
+        color: $font_and_border_color;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+        @include media-down(small) {
+            top: 45px;
+            left: 47%;
+        }
+
+        @include media-down(xsmall) {
+            top: 32px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+
+        @include media-down(small) {
+            font-size: 18px;
+        }
+
+        @include media-down(xsmall) {
+            font-size: 14px;
+        }
+    }
+}
+
+.circle {
+    position: relative;
+    border-bottom: 1px solid $font_and_border_color;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+
+    &::after {
+        content: '•';
+        position: absolute;
+        top: 30px;
+        left: 49%;
+        font-size: 60px;
+        color: $font_and_border_color;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+        @include media-down(small) {
+            top: 25px;
+            left: 47%;
+        }
+
+        @include media-down(xsmall) {
+            top: 16px;
+        }
+    }
+}
+
+.left-slant {
+    background-color: $left_slant_background;
+    position: relative;
+    padding: 70px 15px;
+    margin: 49px -15px;
+    z-index: 10;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left:0;
+      right: 0;
+      height: 200px;
+      background-color: $left_slant_background;
+      transform: skewY(3deg);
+      z-index: -1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left:0;
+      right: 0;
+      height: 200px;
+      background-color: $left_slant_background;
+      transform: skewY(-3deg);
+      z-index: -1;
+    }
+}
+
+.right-slant {
+    background-color: $right_slant_background;
+    position: relative;
+    padding: 70px 15px;
+    margin: 49px -15px;
+    z-index: 11;
+
+    &:before {
+          content: '';
+          position: absolute;
+          top: -50px;
+          left:0;
+          right: 0;
+          height: 200px;
+          background-color: $right_slant_background;
+          transform: skewY(-3deg);
+          z-index: -1;
+    }
+
+    &:after {
+          content: '';
+          position: absolute;
+          bottom: -50px;
+          left:0;
+          right: 0;
+          height: 200px;
+          background-color: $right_slant_background;
+          transform: skewY(3deg);
+          z-index: -1;
+    }
 }
 
 #Container {
@@ -101,7 +229,7 @@ p {
   height: 98%;
   background: rgba(0,0,0,0.2);
 
-  @include respond-to(xl) {
+  @include media-down(small) {
         height: 97%;
     }
 }
@@ -112,7 +240,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    color: white;
+    color: $font_color_light;
     font-size: 20px;
 }
 
@@ -141,12 +269,12 @@ p {
 }
 
 .active-btn-portfolio {
-    background-color: $color_hover_button_links !important;
-    border-color: white;
-    color: white !important;
+    background-color: $button_links_color_hover !important;
+    border-color: $font_color_light;
+    color: $font_color_light !important;
 
     &:hover {
-        border-color: white;
+        border-color: $font_color_light;
     }
 }
 
@@ -162,7 +290,7 @@ p {
 .navbar-toggle {
     width: 100%;
     margin-right: 0;
-    color: white;
+    color: $font_color_light;
     font-size: 19px;
 }
 
@@ -173,7 +301,7 @@ p {
 }
 
 .nav-pills li.active a, .nav-pills li.active a:focus, .nav-pills li.active a:hover {
-    background-color: $background_footer_navbar;
+    background-color: $footer_navbar_background;
     border-radius: 0;
 }
 
@@ -182,13 +310,13 @@ p {
     width: auto;
 
     h1 {
-        color: white;
+        color: $font_color_light;
         text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.9);
     }
 
     p {
         font-family: 'Courgette', cursive;
-        color: white;
+        color: $font_color_light;
     }
 }
 
@@ -197,101 +325,50 @@ p {
     border-radius: 0px;
     min-height: 40px;
 
-    a {
-       font-weight: 100;
-       color: white;
+    .navbar-collapse .nav a {
+       font-weight: 300;
+       color: $font_color_light;
        font-size: 18px; 
     }
 }
 
 .bg-about {
-    background-image: url('../images/sky.png');
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
     padding: 0;
-    color: white;
+    color: $font_color_light;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 
-    .bg-front-about {
-        background: linear-gradient(0deg, rgba(1,1,1,.9),rgba(1,1,1,.6));
-        padding: 100px 0;
-        margin: 0
-    }
-
-    .example-image {
-        margin-bottom: 20px;
-    }
-
-    .about, .circle {
+    .about-slant {
+        background-color: $right_slant_background;
         position: relative;
-        border-bottom: 1px solid $color_border_scripts;
-        margin-bottom: 50px;
+        padding: 70px 0 170px 0;
+        margin: 0 0 49px 0;
+        z-index: 10;
 
-        &::after {
-            content: '•';
+        &:after {
+            content: '';
             position: absolute;
-            top: 58px;
-            left: 50%;
-            font-size: 60px;
-            color: $color_border_scripts;
-
-            @include respond-to(xl) {
-                top: 45px;
-                left: 47%;
-            }
-
-            @include respond-to(xs) {
-                top: 32px;
-            }
-        }
-
-        h2 {
-            margin-bottom: 10px;
-        }
-
-        p, span {
-
-            @include respond-to(xl) {
-                font-size: 18px;
-            }
-
-            @include respond-to(xs) {
-                font-size: 14px;
-            }
+            bottom: -50px;
+            left:0;
+            right: 0;
+            height: 200px;
+            background-color: $right_slant_background;
+            transform: skewY(3deg);
+            z-index: -1;
         }
     }
 
-    .circle {
-        padding-bottom: 15px; 
+    .about-works {
+        .right-slant, .left-slant {
+            background-color: $about_work_slant_background;
 
-        &::after {
-            top: 30px;
-
-            @include respond-to(xl) {
-                top: 25px;
-            }
-
-            @include respond-to(xs) {
-                top: 16px;
+            &:after, &:before {
+                background-color: $about_work_slant_background;
             }
         }
-    }
-
-    h2 {
-        margin-bottom: 50px;
-    }
-
-    span {
-        font-size: 18px;
-        color: white;
-        font-weight: 100;
     }
 }
 
 .bg-work, .bg-skills, .bg-scripts {
-    background-color: #f5f5f5;
 
     .pie_progress {
         width: 100px;
@@ -313,6 +390,14 @@ p {
     }
 }
 
+.bg-work .right-slant {
+    background-color: $font_color_light;
+
+    &:after, &:before {
+        background-color: $font_color_light;
+    }
+}
+
 .bg-education {
     background-image: url('../images/penguins.jpg');
     background-attachment: fixed;
@@ -320,15 +405,16 @@ p {
     background-repeat: repeat;
     background-position: center;
     padding: 0;
+    margin-top: -49px;
 
-    @include respond-to(md) {
+    @include media-down(large) {
         background-size: auto 100%;
     }
 
     .bg-front-about {
         background: linear-gradient(0deg, rgba(255,255,255,.6),rgba(255,255,255,.6));
-        padding: 100px 0;
-        margin: 0
+        padding: 200px 0;
+        margin: 0;
     }
 
     h2 {
@@ -339,7 +425,7 @@ p {
         font-size: 18px;
         font-weight: 300;
 
-        @include respond-to(xl) {
+        @include media-down(small) {
             font-size: 14px;
         }
     }
@@ -347,7 +433,7 @@ p {
     h3 {
         font-weight: 300;
 
-        @include respond-to(xl) {
+        @include media-down(small) {
             font-size: 18px;
         }
     }
@@ -355,10 +441,39 @@ p {
 
 .bg-skills {
 
+    .right-slant {
+        margin: 0px -15px;
+        background-color: $scripts_skills_slant_background;
+
+        &:after, &:before {
+            background-color: $scripts_skills_slant_background;
+        }
+    }
+
+    h2, h3, .pie_progress__number {
+        color: $font_color_light;
+    }
+
+    p, .pie_progress__label {
+        color: $font_and_border_color;
+    }
+
+    p {
+        font-size: 24px;
+        
+        @include media-down(small) {
+            font-size: 18px;
+        }
+
+        @include media-down(xsmall) {
+            font-size: 14px;
+        }
+    }
+
     h3 {
         font-weight: 400;
 
-        @include respond-to(xl) {
+        @include media-down(small) {
             font-size: 22px;
         }
     }
@@ -370,7 +485,7 @@ p {
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 0;
-    color: white;
+    color: $font_color_light;
 
     .bg-front-portfolio {
         background: linear-gradient(0deg, rgba(1,1,1,.3),rgba(255,255,255,.1));
@@ -410,21 +525,25 @@ p {
         }
 
         button {
-            background-color: $color_button_links;
-            color: white;
+            background-color: $button_links_color;
+            color: $font_color_light;
             font-size: 18px;
             font-weight: 300;
             border-radius: 0;
-            border-color: white;
+            border-color: $font_color_light;
             outline: 0;
 
-            @include respond-to(xl) {
-                font-size: 10px;
+            @include media-down(small) {
+                font-size: 14px;
+            }
+
+            @include media-down(xsmall) {
+                font-size: 8px;
             }
 
             &:hover {
-                color: $color_hover_button_links;
-                border-color: $color_hover_button_links;
+                color: $button_links_color_hover;
+                border-color: $button_links_color_hover;
                 background: none;
                 transition: all 0.7s;
             }
@@ -434,14 +553,25 @@ p {
 
 .bg-scripts {
 
+    .right-slant {
+        margin: -100px -15px;
+        background-color: $scripts_skills_slant_background;
+
+        &:after, &:before {
+            background-color: $scripts_skills_slant_background;
+        }
+    }
+
     h2 {
         margin-bottom: 50px;
+        color: $font_color_light;
     }
 
     h3 {
         font-weight: 300;
+        color: $font_and_border_color;
 
-        @include respond-to(xl) {
+        @include media-down(small) {
             font-size: 22px;
         }
     }
@@ -454,12 +584,11 @@ p {
 
         li {
             position: relative;
-            border-left: 1px solid $color_border_scripts;
+            border-left: 1px solid $font_and_border_color;
             padding-left: 10px;
             margin-bottom: 10px;
             font-size: 20px;
-            font-family: 'Roboto', sans-serif;
-            color: $color_border_scripts;
+            color: $font_and_border_color;
 
             &::before {
                 content: '•';
@@ -467,21 +596,22 @@ p {
                 top: -8px;
                 left: -6px;
                 font-size: 32px;
-                color: $color_border_scripts;
+                color: $font_and_border_color;
             }
 
             a {
                 display: block;
                 font-size: 16px;
                 font-weight: 300;
-                text-decoration: underline;
-                color: $color_button_links;
+                text-decoration: none;
+                color: #69a0b8;
 
                 &:hover {
-                    color: $color_hover_button_links;
+                    color: #185571;
+                    text-decoration: underline;
                 }
 
-                @include respond-to(xl) {
+                @include media-down(small) {
                     font-size: 14px;
                 }
             }
@@ -497,13 +627,13 @@ p {
     background-position: center;
     padding: 0;
 
-    @include respond-to(md) {
+    @include media-down(large) {
         background-size: auto 100%;
     }
 
     .bg-front-contact {
         background: linear-gradient(0deg, rgba(255,255,255,.7),rgba(255,255,255,.7));
-        padding: 100px 0;
+        padding: 150px 0;
         margin: 0
     }
 
@@ -532,28 +662,28 @@ p {
 
     .btn-primary {
         background: none;
-        color: $color_button_links;
+        color: $button_links_color;
         font-size: 18px;
         border-radius: 0;
-        border-color: $color_button_links;
+        border-color: $button_links_color;
         margin-top: 20px;
 
         &:hover, &:active, &:focus {
-            color: white;
-            background-color: $color_button_links;
+            color: $font_color_light;
+            background-color: $button_links_color;
             border-radius: 0;
-            border-color: white;
+            border-color: $font_color_light;
             transition: all 0.7s;
         }
     }
 }
 
 footer {
-    background-color: $background_footer_navbar;
-    color: white;
+    background-color: $footer_navbar_background;
+    color: $font_color_light;
 
     i {
-        color: white;
+        color: $font_color_light;
         font-size: 22px;
 
         &:hover {
@@ -602,4 +732,33 @@ footer {
         color: #133783;
         transition: color 0.1s;
     }
+}
+
+.fade-in-left {
+    transform: translate(-100px, 0);
+    opacity: 0;
+}
+
+.fade-in-right {
+    transform: translate(50px, 0);
+
+    @include media-down(xsmall) {
+        transform: translate(20px, 0);
+    }
+}
+
+.fade-in-top {
+    transform: translate(0, -200px);
+    opacity: 0;
+}
+
+.fade-in-down {
+    transform: translate(0, 100px);
+    opacity: 0;
+}
+
+.animation-fade-in {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: transform 1s linear, opacity .5s linear;
 }
