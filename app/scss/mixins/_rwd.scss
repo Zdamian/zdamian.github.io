@@ -1,39 +1,39 @@
-@mixin only-to($point) {
-    @if $point == lg {
+@mixin media-only($point) {
+    @if $point == xlarge {
         @media (min-width: 1200px) { @content; }
-    } @else if $point == md {
+    } @else if $point == large {
         @media (min-width: 992px) and (max-width: 1199px) { @content; }
-    } @else if $point == sm {
+    } @else if $point == medium {
         @media (min-width: 768px) and (max-width: 991px) { @content; }
-    } @else if $point == xl {
-        @media (min-width: 481px) and (max-width: 767px) { @content; }
-    } @else if $point == xs {
-        @media (max-width: 480px) { @content; }
+    } @else if $point == small {
+        @media (min-width: 575px) and (max-width: 767px) { @content; }
+    } @else if $point == xsmall {
+        @media (max-width: 575px) { @content; }
     }
 }
 
-@mixin respond-to($point) {
-    @if $point == md {
+@mixin media-down($point) {
+    @if $point == large {
         @media (max-width: 1199px) { @content; }
-    } @else if $point == sm {
+    } @else if $point == medium {
         @media (max-width: 991px) { @content; }
-    } @else if $point == xl {
+    } @else if $point == small {
         @media (max-width: 767px) { @content; }
-    } @else if $point == xs {
-        @media (max-width: 480px) { @content; }
+    } @else if $point == xsmall {
+        @media (max-width: 575px) { @content; }
     }
-    // Default no max width
+    // No media queries for large devices (> 1199px)
 }
 
-@mixin respond-from($point) {
-    @if $point == lg {
+@mixin media-up($point) {
+    @if $point == xlarge {
         @media (min-width: 1200px) { @content; }
-    } @else if $point == md {
+    } @else if $point == large {
         @media (min-width: 992px) { @content; }
-    } @else if $point == sm {
+    } @else if $point == medium {
         @media (min-width: 768px) { @content; }
-    } @else if $point == xl {
-        @media (min-width: 481px) { @content; }
-    } 
-    // Default from 0px
+    } @else if $point == small {
+        @media (min-width: 576px) { @content; }
+    }
+    // No media queries for extra smallall devices (< 576px)
 }
