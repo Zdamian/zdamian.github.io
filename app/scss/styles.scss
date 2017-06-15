@@ -369,21 +369,7 @@ p {
 }
 
 .bg-work, .bg-skills, .bg-scripts {
-
-    .pie_progress {
-        width: 100px;
-        margin: 0 auto;
-        margin-bottom: 25px;
-    }
-
-    .pie_progress__number {
-        font-size: 26px
-    }
-
-    .pie_progress__label {
-        margin-top: 20px;
-    }
-
+    
     p {
         font-size: 24px;
         color: #000;
@@ -476,6 +462,14 @@ p {
         @include media-down(small) {
             font-size: 22px;
         }
+    }
+
+    .skill img {
+        max-width: 100px;
+        margin-bottom: 40px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
