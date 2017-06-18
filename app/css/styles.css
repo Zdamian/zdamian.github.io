@@ -509,10 +509,10 @@ p {
 footer {
   background-color: #111;
   color: #fff; }
-  footer i {
+  footer span {
     color: #fff;
     font-size: 22px; }
-    footer i:hover {
+    footer span:hover {
       font-size: 21px;
       transition: font-size 0.1s; }
   footer p {
