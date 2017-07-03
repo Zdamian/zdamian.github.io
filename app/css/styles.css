@@ -300,17 +300,6 @@ p {
     .bg-about .about-works .right-slant:after, .bg-about .about-works .right-slant:before, .bg-about .about-works .left-slant:after, .bg-about .about-works .left-slant:before {
       background-color: #3a3e52; }
 
-.bg-work .pie_progress, .bg-skills .pie_progress, .bg-scripts .pie_progress {
-  width: 100px;
-  margin: 0 auto;
-  margin-bottom: 25px; }
-
-.bg-work .pie_progress__number, .bg-skills .pie_progress__number, .bg-scripts .pie_progress__number {
-  font-size: 26px; }
-
-.bg-work .pie_progress__label, .bg-skills .pie_progress__label, .bg-scripts .pie_progress__label {
-  margin-top: 20px; }
-
 .bg-work p, .bg-skills p, .bg-scripts p {
   font-size: 24px;
   color: #000; }
@@ -375,6 +364,13 @@ p {
   @media (max-width: 767px) {
     .bg-skills h3 {
       font-size: 22px; } }
+
+.bg-skills .skill img {
+  max-width: 100px;
+  margin-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 .bg-portfolio {
   background-image: url("../images/landspace.jpg");
@@ -513,10 +509,10 @@ p {
 footer {
   background-color: #111;
   color: #fff; }
-  footer i {
+  footer span {
     color: #fff;
     font-size: 22px; }
-    footer i:hover {
+    footer span:hover {
       font-size: 21px;
       transition: font-size 0.1s; }
   footer p {

@@ -126,36 +126,6 @@ $(function() {
         $(this).tab('show');
     });
 
-    $('.pie_progress').asPieProgress({
-        namespace: 'pie_progress'
-    });
-    // Example with grater loading time - loads longer
-    $('.pie_progress--slow').asPieProgress({
-        namespace: 'pie_progress',
-        goal: 1000,
-        min: 0,
-        max: 1000,
-        speed: 200,
-        easing: 'linear'
-    });
-    // Example with grater loading time - loads longer
-    $('.pie_progress--countdown').asPieProgress({
-        namespace: 'pie_progress',
-        easing: 'linear',
-        first: 120,
-        max: 120,
-        goal: 0,
-        speed: 1200, // 120 s * 1000 ms per s / 100
-        numberCallback: function(n) {
-            var minutes = Math.floor(this.now / 60);
-            var seconds = this.now % 60;
-            if (seconds < 10) {
-                seconds = '0' + seconds;
-            }
-            return minutes + ': ' + seconds;
-        }
-    });
-
     var $animationElements = $('.skill');
     var $elementsFadeIn = $('.fade-in');
     var $window = $(window);
